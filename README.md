@@ -183,4 +183,46 @@ A granular, transaction-level data grid optimized for operational auditing and d
 - **Granular Reporting:** Tabular breakdown displaying invoice numbers, exact dates, gross sales values, specific item descriptions (*Item_Desc*), calculated product costs, and resulting margins.
 - **Total Aggregations:** Bottom row highlighting cumulative metrics across all filtered records (e.g., Gross Sales, Total Cost, Total Margin).
 - **Time Intelligence Slicers:** Quick-filter sidebar panel allowing instant data isolation by calendar year (2012, 2013, 2014) or across the full dataset timeline.
-Çukurova University
+
+## 🚀 How to Run This Project
+
+### Prerequisites
+
+Before running the project, make sure the following software is installed:
+
+- Microsoft SQL Server Express
+- SQL Server Management Studio (SSMS)
+- Microsoft Power BI Desktop
+
+---
+
+### Installation
+
+1. Clone this repository.
+
+2. Import the CSV files located in the **Dataset** folder into your SQL Server database.
+
+3. Execute the SQL scripts in the following order:
+
+```
+01_CreateDatabase.sql
+02_DimensionTables.sql
+03_DataCleaning.sql
+04_Validation.sql
+```
+
+These scripts create the required dimension tables, clean the data, standardize regional information, and validate the final dataset.
+
+4. Open the Power BI file located in the **PowerBI** folder.
+
+5. Go to:
+
+```
+Home → Transform Data → Data Source Settings
+```
+
+Update the SQL Server connection to match your local SQL Server instance (e.g., `.\SQLEXPRESS`).
+
+6. Click **Refresh** to load the data into Power BI.
+
+The dashboard is now ready to use.
